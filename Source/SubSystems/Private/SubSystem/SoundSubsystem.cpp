@@ -12,6 +12,12 @@ void USoundSubsystem::SetMasterVolume(float NewVolume)
     UpdateMixer(MainSoundMix, MasterClass, MasterVolume);
 }
 
+void USoundSubsystem::SetMasterVolumeLogarithmic(float LinearVolume)
+{
+    float LogarithmicVolume = FMath::Pow(LinearVolume, 2.0f);
+	SetMasterVolume(LogarithmicVolume);
+}
+
 void USoundSubsystem::SetMusicVolume(float NewVolume)
 {
     MusicVolume = FMath::Clamp(NewVolume, 0.f, 1.f);
@@ -27,6 +33,12 @@ void USoundSubsystem::SetMusicVolumeLogarithmic(float LinearVolume)
 void USoundSubsystem::SetSFXVolume(float NewVolume)
 {
     SFXVolume = FMath::Clamp(NewVolume, 0.f, 1.f);
+}
+
+void USoundSubsystem::SetSFXVolumeLogarithmic(float LinearVolume)
+{
+    float LogarithmicVolume = FMath::Pow(LinearVolume, 2.0f);
+	SetSFXVolume(LogarithmicVolume);
 }
 
 void USoundSubsystem::SetMainSoundMix(USoundMix* NewSoundMix)

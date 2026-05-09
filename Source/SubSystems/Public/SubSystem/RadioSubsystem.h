@@ -50,6 +50,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Radio")
 	void PlayNextTrack();
 
+	/**
+ * @brief Reproduce la pista anterior en la lista de reproducción.
+ *
+ * Decrementa el índice actual de forma circular (vuelve al final si llega al inicio).
+ * Si el AudioComponent no está inicializado o registrado en el mundo actual,
+ * esta función se encarga de asegurar su validez antes de la reproducción.
+ */
+	UFUNCTION(BlueprintCallable, Category = "Radio")
+	void PlayPreviousTrack();
+
 /**
  * @brief Detiene la reproducción de audio actual.
  *

@@ -57,6 +57,13 @@ public:
 	void SetMasterVolume(float NewVolume);
 
 	/**
+ * @brief Actualiza el volumen de Master de manera logarítmica y aplica el override al mezclador.
+ * @param LinearVolume Nuevo volumen lineal en rango [0.0 - 1.0].
+ */
+	UFUNCTION(BlueprintCallable, Category = "Sound | Set")
+	void SetMasterVolumeLogarithmic(float LinearVolume);
+
+	/**
 	 * @brief Actualiza el volumen de Música y aplica el override al mezclador.
 	 * @param NewVolume Nuevo volumen en rango [0.0 - 1.0].
 	 */
@@ -76,6 +83,13 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, Category = "Sound | Set")
 	void SetSFXVolume(float NewVolume);
+
+	/**
+ * @brief Actualiza el volumen de SFX de manera logarítmica y aplica el override al mezclador.
+ * @param LinearVolume Nuevo volumen lineal en rango [0.0 - 1.0].
+ */
+	UFUNCTION(BlueprintCallable, Category = "Sound | Set")
+	void SetSFXVolumeLogarithmic(float LinearVolume);
 
 	/** @brief Asigna un nuevo Sound Mix como mezclador principal. @param NewSoundMix Puntero al nuevo asset de Sound Mix. */
 	UFUNCTION(BlueprintCallable, Category = "Sound | Set")

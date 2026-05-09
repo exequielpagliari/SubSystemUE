@@ -31,10 +31,12 @@ void URadioSubsystem::PlayNextTrack()
 	if (Playlist.Num() == 0) return;
 	
 
-	CurrentTrackIndex = (CurrentTrackIndex + 1) % Playlist.Num();
-	if (!Playlist[CurrentTrackIndex]) {
+	CurrentTrackIndex++;
+	if (CurrentTrackIndex >= Playlist.Num()) {
+		CurrentTrackIndex = 0;
 		UE_LOG(LogTemp, Warning, TEXT("Radio: Se ha reiniciado la playlist"));
 	}
+
 	UWorld* World = GetWorld();
 	if (!World)
 	{
@@ -57,6 +59,37 @@ void URadioSubsystem::PlayNextTrack()
 void URadioSubsystem::OnTrackFinished()
 {
 	PlayNextTrack();
+}
+
+void URadioSubsystem::PlayPreviousTrack()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Radio: Inicia Intruccion Reproduciendo siguiente pista..."));
+	UE_LOG(LogTemp, Warning, TEXT("Radio: Cantidad de pistas es %d"), Playlist.Num());
+	if (Playlist.Num() == 0) return;
+
+
+	CurrentTrackIndex--;
+	if (CurrentTrackIndex < 0) {
+		CurrentTrackIndex = Playlist.Num() - 1;
+		UE_LOG(LogTemp, Warning, TEXT("Radio: Se ha reiniciado la playlist"));
+	}
+
+	UWorld* World = GetWorld();
+	if (!World)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Radio: No se pudo obtener el mundo"));
+	}
+
+
+
+	if (Playlist[CurrentTrackIndex] && World)
+	{
+		RadioAudioComponent->Stop();
+		RadioAudioComponent = PLAY_MUSIC(Playlist[CurrentTrackIndex])
+
+
+			UE_LOG(LogTemp, Log, TEXT("Radio: Reproduciendo pista %d"), CurrentTrackIndex);
+	}
 }
 
 void URadioSubsystem::StopRadio()
