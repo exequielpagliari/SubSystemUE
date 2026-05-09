@@ -1,0 +1,234 @@
+\doxysection{USound\+Subsystem Class Reference}
+\hypertarget{class_u_sound_subsystem}{}\label{class_u_sound_subsystem}\index{USoundSubsystem@{USoundSubsystem}}
+
+
+Subsistema encargado de la gestión global del volumen y la mezcla de sonido.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Subsystem.\+h$>$}
+
+Inheritance diagram for USound\+Subsystem\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_sound_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_u_sound_subsystem_af11a2323a300322a0d9d951c0217009c}{Get\+Master\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el volumen actual del canal Master. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_u_sound_subsystem_a1a1a6c608e04dbee448b826c68125a67}{Get\+Music\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el volumen actual del canal de Música. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_u_sound_subsystem_a3a56aa2e2b3182c22656a0fb2e7b3685}{Get\+SFXVolume}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el volumen actual del canal de Efectos (SFX). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a9f527586bf86229d3aa4405cf641ba86}{Set\+Master\+Volume}} (float New\+Volume)
+\begin{DoxyCompactList}\small\item\em Actualiza el volumen Master y aplica el override al mezclador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_ac9761b0d370d117eea444357238b5fc7}{Set\+Music\+Volume}} (float New\+Volume)
+\begin{DoxyCompactList}\small\item\em Actualiza el volumen de Música y aplica el override al mezclador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a158afb18e339accbb79af02fd26b4aa2}{Set\+SFXVolume}} (float New\+Volume)
+\begin{DoxyCompactList}\small\item\em Actualiza el volumen de SFX y aplica el override al mezclador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a2ce2213988694b83f16a0096b00ab8ad}{Set\+Main\+Sound\+Mix}} (USound\+Mix \texorpdfstring{$\ast$}{*}New\+Sound\+Mix)
+\begin{DoxyCompactList}\small\item\em Asigna un nuevo Sound Mix como mezclador principal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a8b9d9f795b4f263781cb1e4fd46ffc82}{Set\+Master\+Sound\+Class}} (USound\+Class \texorpdfstring{$\ast$}{*}New\+Sound\+Class)
+\begin{DoxyCompactList}\small\item\em Asigna el asset de Sound Class para el canal Master. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a8cca4219365c83ac9d41d9c6dc2f271a}{Set\+Music\+Sound\+Class}} (USound\+Class \texorpdfstring{$\ast$}{*}New\+Sound\+Class)
+\begin{DoxyCompactList}\small\item\em Asigna el asset de Sound Class para el canal de Música. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a9513a55a5a355fd8d1dbf15a5876be0d}{Set\+SFXSound\+Class}} (USound\+Class \texorpdfstring{$\ast$}{*}New\+Sound\+Class)
+\begin{DoxyCompactList}\small\item\em Asigna el asset de Sound Class para el canal de SFX. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a79c0480a11fdc25669178c9685640956}{Update\+Mixer}} (USound\+Mix \texorpdfstring{$\ast$}{*}In\+Sound\+Mix, USound\+Class \texorpdfstring{$\ast$}{*}In\+Sound\+Class, float New\+Volume)
+\begin{DoxyCompactList}\small\item\em Ejecuta el cambio técnico en el motor de audio de Unreal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_sound_subsystem_a47dc9b21670fbe671474cd1486a95cdb}\label{class_u_sound_subsystem_a47dc9b21670fbe671474cd1486a95cdb} 
+TObject\+Ptr$<$ USound\+Mix $>$ {\bfseries Main\+Sound\+Mix}
+\begin{DoxyCompactList}\small\item\em Referencia al Sound Mix principal que controla las jerarquías de sonido. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_sound_subsystem_abaa041b694115dfef0a55b9c95bd2ba7}\label{class_u_sound_subsystem_abaa041b694115dfef0a55b9c95bd2ba7} 
+TObject\+Ptr$<$ USound\+Class $>$ {\bfseries Master\+Class}
+\begin{DoxyCompactList}\small\item\em Referencia a la clase de sonido Master (padre de todas). \end{DoxyCompactList}\item 
+\Hypertarget{class_u_sound_subsystem_a052a9bb0c6b4cf52822da52bebf26e01}\label{class_u_sound_subsystem_a052a9bb0c6b4cf52822da52bebf26e01} 
+TObject\+Ptr$<$ USound\+Class $>$ {\bfseries Music\+Class}
+\begin{DoxyCompactList}\small\item\em Referencia a la clase de sonido que agrupa la música. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_sound_subsystem_a0f2db3e8ec9260a7baacc8243c31c30b}\label{class_u_sound_subsystem_a0f2db3e8ec9260a7baacc8243c31c30b} 
+TObject\+Ptr$<$ USound\+Class $>$ {\bfseries SFXClass}
+\begin{DoxyCompactList}\small\item\em Referencia a la clase de sonido que agrupa los efectos de sonido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subsistema encargado de la gestión global del volumen y la mezcla de sonido. 
+
+Este subsistema permite controlar de forma independiente los volúmenes de Master, Música y SFX mediante el uso de Sound Mixes y Sound Classes. Persiste durante toda la vida de la Game\+Instance. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_sound_subsystem_af11a2323a300322a0d9d951c0217009c}\index{USoundSubsystem@{USoundSubsystem}!GetMasterVolume@{GetMasterVolume}}
+\index{GetMasterVolume@{GetMasterVolume}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetMasterVolume()}{GetMasterVolume()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_af11a2323a300322a0d9d951c0217009c} 
+float USound\+Subsystem\+::\+Get\+Master\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el volumen actual del canal Master. 
+
+\begin{DoxyReturn}{Returns}
+float en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. 
+\end{DoxyReturn}
+\Hypertarget{class_u_sound_subsystem_a1a1a6c608e04dbee448b826c68125a67}\index{USoundSubsystem@{USoundSubsystem}!GetMusicVolume@{GetMusicVolume}}
+\index{GetMusicVolume@{GetMusicVolume}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetMusicVolume()}{GetMusicVolume()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a1a1a6c608e04dbee448b826c68125a67} 
+float USound\+Subsystem\+::\+Get\+Music\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el volumen actual del canal de Música. 
+
+\begin{DoxyReturn}{Returns}
+float en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. 
+\end{DoxyReturn}
+\Hypertarget{class_u_sound_subsystem_a3a56aa2e2b3182c22656a0fb2e7b3685}\index{USoundSubsystem@{USoundSubsystem}!GetSFXVolume@{GetSFXVolume}}
+\index{GetSFXVolume@{GetSFXVolume}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetSFXVolume()}{GetSFXVolume()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a3a56aa2e2b3182c22656a0fb2e7b3685} 
+float USound\+Subsystem\+::\+Get\+SFXVolume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el volumen actual del canal de Efectos (SFX). 
+
+\begin{DoxyReturn}{Returns}
+float en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. 
+\end{DoxyReturn}
+\Hypertarget{class_u_sound_subsystem_a2ce2213988694b83f16a0096b00ab8ad}\index{USoundSubsystem@{USoundSubsystem}!SetMainSoundMix@{SetMainSoundMix}}
+\index{SetMainSoundMix@{SetMainSoundMix}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetMainSoundMix()}{SetMainSoundMix()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a2ce2213988694b83f16a0096b00ab8ad} 
+void USound\+Subsystem\+::\+Set\+Main\+Sound\+Mix (\begin{DoxyParamCaption}\item[{USound\+Mix \texorpdfstring{$\ast$}{*}}]{New\+Sound\+Mix}{}\end{DoxyParamCaption})}
+
+
+
+Asigna un nuevo Sound Mix como mezclador principal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Sound\+Mix} & Puntero al nuevo asset de Sound Mix. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a8b9d9f795b4f263781cb1e4fd46ffc82}\index{USoundSubsystem@{USoundSubsystem}!SetMasterSoundClass@{SetMasterSoundClass}}
+\index{SetMasterSoundClass@{SetMasterSoundClass}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetMasterSoundClass()}{SetMasterSoundClass()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a8b9d9f795b4f263781cb1e4fd46ffc82} 
+void USound\+Subsystem\+::\+Set\+Master\+Sound\+Class (\begin{DoxyParamCaption}\item[{USound\+Class \texorpdfstring{$\ast$}{*}}]{New\+Sound\+Class}{}\end{DoxyParamCaption})}
+
+
+
+Asigna el asset de Sound Class para el canal Master. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Sound\+Class} & Puntero al asset de Sound Class. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a9f527586bf86229d3aa4405cf641ba86}\index{USoundSubsystem@{USoundSubsystem}!SetMasterVolume@{SetMasterVolume}}
+\index{SetMasterVolume@{SetMasterVolume}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetMasterVolume()}{SetMasterVolume()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a9f527586bf86229d3aa4405cf641ba86} 
+void USound\+Subsystem\+::\+Set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{New\+Volume}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el volumen Master y aplica el override al mezclador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Volume} & Nuevo volumen en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a8cca4219365c83ac9d41d9c6dc2f271a}\index{USoundSubsystem@{USoundSubsystem}!SetMusicSoundClass@{SetMusicSoundClass}}
+\index{SetMusicSoundClass@{SetMusicSoundClass}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetMusicSoundClass()}{SetMusicSoundClass()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a8cca4219365c83ac9d41d9c6dc2f271a} 
+void USound\+Subsystem\+::\+Set\+Music\+Sound\+Class (\begin{DoxyParamCaption}\item[{USound\+Class \texorpdfstring{$\ast$}{*}}]{New\+Sound\+Class}{}\end{DoxyParamCaption})}
+
+
+
+Asigna el asset de Sound Class para el canal de Música. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Sound\+Class} & Puntero al asset de Sound Class. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_ac9761b0d370d117eea444357238b5fc7}\index{USoundSubsystem@{USoundSubsystem}!SetMusicVolume@{SetMusicVolume}}
+\index{SetMusicVolume@{SetMusicVolume}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetMusicVolume()}{SetMusicVolume()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_ac9761b0d370d117eea444357238b5fc7} 
+void USound\+Subsystem\+::\+Set\+Music\+Volume (\begin{DoxyParamCaption}\item[{float}]{New\+Volume}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el volumen de Música y aplica el override al mezclador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Volume} & Nuevo volumen en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a9513a55a5a355fd8d1dbf15a5876be0d}\index{USoundSubsystem@{USoundSubsystem}!SetSFXSoundClass@{SetSFXSoundClass}}
+\index{SetSFXSoundClass@{SetSFXSoundClass}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetSFXSoundClass()}{SetSFXSoundClass()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a9513a55a5a355fd8d1dbf15a5876be0d} 
+void USound\+Subsystem\+::\+Set\+SFXSound\+Class (\begin{DoxyParamCaption}\item[{USound\+Class \texorpdfstring{$\ast$}{*}}]{New\+Sound\+Class}{}\end{DoxyParamCaption})}
+
+
+
+Asigna el asset de Sound Class para el canal de SFX. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Sound\+Class} & Puntero al asset de Sound Class. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a158afb18e339accbb79af02fd26b4aa2}\index{USoundSubsystem@{USoundSubsystem}!SetSFXVolume@{SetSFXVolume}}
+\index{SetSFXVolume@{SetSFXVolume}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetSFXVolume()}{SetSFXVolume()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a158afb18e339accbb79af02fd26b4aa2} 
+void USound\+Subsystem\+::\+Set\+SFXVolume (\begin{DoxyParamCaption}\item[{float}]{New\+Volume}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el volumen de SFX y aplica el override al mezclador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Volume} & Nuevo volumen en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a79c0480a11fdc25669178c9685640956}\index{USoundSubsystem@{USoundSubsystem}!UpdateMixer@{UpdateMixer}}
+\index{UpdateMixer@{UpdateMixer}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{UpdateMixer()}{UpdateMixer()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a79c0480a11fdc25669178c9685640956} 
+void USound\+Subsystem\+::\+Update\+Mixer (\begin{DoxyParamCaption}\item[{USound\+Mix \texorpdfstring{$\ast$}{*}}]{In\+Sound\+Mix}{, }\item[{USound\+Class \texorpdfstring{$\ast$}{*}}]{In\+Sound\+Class}{, }\item[{float}]{New\+Volume}{}\end{DoxyParamCaption})}
+
+
+
+Ejecuta el cambio técnico en el motor de audio de Unreal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Sound\+Mix} & El mezclador sobre el que actuar. \\
+\hline
+{\em In\+Sound\+Class} & La clase de sonido a la que aplicar el volumen. \\
+\hline
+{\em New\+Volume} & El valor de volumen a aplicar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/exepa/\+Documents/\+Unreal Projects/\+Sub\+Systems/\+Source/\+Sub\+Systems/\+Public/\+Sub\+System/Sound\+Subsystem.\+h\item 
+C\+:/\+Users/exepa/\+Documents/\+Unreal Projects/\+Sub\+Systems/\+Source/\+Sub\+Systems/\+Private/\+Sub\+System/Sound\+Subsystem.\+cpp\end{DoxyCompactItemize}

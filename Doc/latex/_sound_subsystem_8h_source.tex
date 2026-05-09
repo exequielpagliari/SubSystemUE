@@ -1,0 +1,72 @@
+\doxysection{Sound\+Subsystem.\+h}
+\hypertarget{_sound_subsystem_8h_source}{}\label{_sound_subsystem_8h_source}\index{C:/Users/exepa/Documents/Unreal Projects/SubSystems/Source/SubSystems/Public/SubSystem/SoundSubsystem.h@{C:/Users/exepa/Documents/Unreal Projects/SubSystems/Source/SubSystems/Public/SubSystem/SoundSubsystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Subsystems/GameInstanceSubsystem.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Sound/SoundMix.h"{}}\ \ \ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Sound/SoundClass.h"{}}\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}SoundSubsystem.generated.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ UCLASS(Blueprintable)}
+\DoxyCodeLine{00019\ class\ SUBSYSTEMS\_API\ \mbox{\hyperlink{class_u_sound_subsystem}{USoundSubsystem}}\ :\ public\ UGameInstanceSubsystem}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Config"{}})}
+\DoxyCodeLine{00026\ \ \ \ \ TObjectPtr<USoundMix>\ \mbox{\hyperlink{class_u_sound_subsystem_a47dc9b21670fbe671474cd1486a95cdb}{MainSoundMix}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Config"{}})}
+\DoxyCodeLine{00030\ \ \ \ \ TObjectPtr<USoundClass>\ \mbox{\hyperlink{class_u_sound_subsystem_abaa041b694115dfef0a55b9c95bd2ba7}{MasterClass}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Config"{}})}
+\DoxyCodeLine{00034\ \ \ \ \ TObjectPtr<USoundClass>\ \mbox{\hyperlink{class_u_sound_subsystem_a052a9bb0c6b4cf52822da52bebf26e01}{MusicClass}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Config"{}})}
+\DoxyCodeLine{00038\ \ \ \ \ TObjectPtr<USoundClass>\ \mbox{\hyperlink{class_u_sound_subsystem_a0f2db3e8ec9260a7baacc8243c31c30b}{SFXClass}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Get"{}})}
+\DoxyCodeLine{00042\ \ \ \ \ inline\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_sound_subsystem_af11a2323a300322a0d9d951c0217009c}{GetMasterVolume}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ MasterVolume;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Get"{}})}
+\DoxyCodeLine{00046\ \ \ \ \ inline\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_sound_subsystem_a1a1a6c608e04dbee448b826c68125a67}{GetMusicVolume}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ MusicVolume;\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Get"{}})}
+\DoxyCodeLine{00050\ \ \ \ \ inline\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_sound_subsystem_a3a56aa2e2b3182c22656a0fb2e7b3685}{GetSFXVolume}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ SFXVolume;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00057\ \ \ \ \ void\ SetMasterVolume(\textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicVolume(\textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSFXVolume(\textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMainSoundMix(USoundMix*\ NewSoundMix);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMasterSoundClass(USoundClass*\ NewSoundClass);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicSoundClass(USoundClass*\ NewSoundClass);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00086\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSFXSoundClass(USoundClass*\ NewSoundClass);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateMixer(USoundMix*\ InSoundMix,\ USoundClass*\ InSoundClass,\ \textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ private:}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{float}\ MasterVolume\ =\ 1.f;}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{float}\ MusicVolume\ =\ 1.f;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{float}\ SFXVolume\ =\ 1.f;}
+\DoxyCodeLine{00105\ \};}
+
+\end{DoxyCode}
