@@ -1,0 +1,49 @@
+\doxysection{Radio\+Subsystem.\+h}
+\hypertarget{_radio_subsystem_8h_source}{}\label{_radio_subsystem_8h_source}\index{C:/Users/exepa/Documents/Unreal Projects/SubSystems/Source/SubSystems/Public/SubSystem/RadioSubsystem.h@{C:/Users/exepa/Documents/Unreal Projects/SubSystems/Source/SubSystems/Public/SubSystem/RadioSubsystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Subsystems/GameInstanceSubsystem.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Components/AudioComponent.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Sound/SoundWave.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}RadioSubsystem.generated.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00023\ UCLASS()}
+\DoxyCodeLine{00024\ class\ SUBSYSTEMS\_API\ \mbox{\hyperlink{class_u_radio_subsystem}{URadioSubsystem}}\ :\ public\ UGameInstanceSubsystem}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(FSubsystemCollectionBase\&\ Collection)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_a33429f88db0af600cb99fb08bdc7f63f}{LoadPlaylist}}(TArray<USoundBase*>\ NewTracks);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_a26408cb6c1ba728b77983920e099e58d}{PlayNextTrack}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_afc741e0f476d029417b6d8d1f94464df}{StopRadio}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}{SetRadioVolume}}(\textcolor{keywordtype}{float}\ Volume);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00082\ \ \ \ \ UAudioComponent*\ RadioAudioComponent;}
+\DoxyCodeLine{00086\ \ \ \ \ TArray<USoundBase*>\ Playlist;}
+\DoxyCodeLine{00091\ \ \ \ \ int32\ CurrentTrackIndex\ =\ -\/1;}
+\DoxyCodeLine{00098\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ OnTrackFinished();}
+\DoxyCodeLine{00100\ \};}
+
+\end{DoxyCode}

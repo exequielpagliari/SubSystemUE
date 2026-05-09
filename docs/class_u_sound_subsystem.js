@@ -8,6 +8,7 @@ var class_u_sound_subsystem =
     [ "SetMasterVolume", "class_u_sound_subsystem.html#a9f527586bf86229d3aa4405cf641ba86", null ],
     [ "SetMusicSoundClass", "class_u_sound_subsystem.html#a8cca4219365c83ac9d41d9c6dc2f271a", null ],
     [ "SetMusicVolume", "class_u_sound_subsystem.html#ac9761b0d370d117eea444357238b5fc7", null ],
+    [ "SetMusicVolumeLogarithmic", "class_u_sound_subsystem.html#a99a03f91159d30342c43a908ff139e53", null ],
     [ "SetSFXSoundClass", "class_u_sound_subsystem.html#a9513a55a5a355fd8d1dbf15a5876be0d", null ],
     [ "SetSFXVolume", "class_u_sound_subsystem.html#a158afb18e339accbb79af02fd26b4aa2", null ],
     [ "UpdateMixer", "class_u_sound_subsystem.html#a79c0480a11fdc25669178c9685640956", null ],

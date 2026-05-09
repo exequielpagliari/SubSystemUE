@@ -28,6 +28,8 @@ void \mbox{\hyperlink{class_u_sound_subsystem_a9f527586bf86229d3aa4405cf641ba86}
 \begin{DoxyCompactList}\small\item\em Actualiza el volumen Master y aplica el override al mezclador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_ac9761b0d370d117eea444357238b5fc7}{Set\+Music\+Volume}} (float New\+Volume)
 \begin{DoxyCompactList}\small\item\em Actualiza el volumen de Música y aplica el override al mezclador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a99a03f91159d30342c43a908ff139e53}{Set\+Music\+Volume\+Logarithmic}} (float Linear\+Volume)
+\begin{DoxyCompactList}\small\item\em Actualiza el volumen de Música de manera logarítmica y aplica el override al mezclador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_a158afb18e339accbb79af02fd26b4aa2}{Set\+SFXVolume}} (float New\+Volume)
 \begin{DoxyCompactList}\small\item\em Actualiza el volumen de SFX y aplica el override al mezclador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_a2ce2213988694b83f16a0096b00ab8ad}{Set\+Main\+Sound\+Mix}} (USound\+Mix \texorpdfstring{$\ast$}{*}New\+Sound\+Mix)
@@ -175,6 +177,21 @@ Actualiza el volumen de Música y aplica el override al mezclador.
 
 \begin{DoxyParams}{Parameters}
 {\em New\+Volume} & Nuevo volumen en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a99a03f91159d30342c43a908ff139e53}\index{USoundSubsystem@{USoundSubsystem}!SetMusicVolumeLogarithmic@{SetMusicVolumeLogarithmic}}
+\index{SetMusicVolumeLogarithmic@{SetMusicVolumeLogarithmic}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetMusicVolumeLogarithmic()}{SetMusicVolumeLogarithmic()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a99a03f91159d30342c43a908ff139e53} 
+void USound\+Subsystem\+::\+Set\+Music\+Volume\+Logarithmic (\begin{DoxyParamCaption}\item[{float}]{Linear\+Volume}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el volumen de Música de manera logarítmica y aplica el override al mezclador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Linear\+Volume} & Nuevo volumen lineal en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{class_u_sound_subsystem_a9513a55a5a355fd8d1dbf15a5876be0d}\index{USoundSubsystem@{USoundSubsystem}!SetSFXSoundClass@{SetSFXSoundClass}}

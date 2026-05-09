@@ -64,6 +64,13 @@ public:
 	void SetMusicVolume(float NewVolume);
 
 	/**
+	 * @brief Actualiza el volumen de Música de manera logarítmica y aplica el override al mezclador.
+	 * @param LinearVolume Nuevo volumen lineal en rango [0.0 - 1.0].
+	 */
+	UFUNCTION(BlueprintCallable, Category = "Sound | Set")
+	void SetMusicVolumeLogarithmic(float LinearVolume);
+
+	/**
 	 * @brief Actualiza el volumen de SFX y aplica el override al mezclador.
 	 * @param NewVolume Nuevo volumen en rango [0.0 - 1.0].
 	 */

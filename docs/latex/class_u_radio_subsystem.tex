@@ -1,0 +1,101 @@
+\doxysection{URadio\+Subsystem Class Reference}
+\hypertarget{class_u_radio_subsystem}{}\label{class_u_radio_subsystem}\index{URadioSubsystem@{URadioSubsystem}}
+
+
+Subsistema encargado de la gestión y reproducción de audio persistente.  
+
+
+
+
+{\ttfamily \#include $<$Radio\+Subsystem.\+h$>$}
+
+Inheritance diagram for URadio\+Subsystem\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_radio_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_radio_subsystem_a7549582c019bf233e626c26295709b9c}\label{class_u_radio_subsystem_a7549582c019bf233e626c26295709b9c} 
+virtual void {\bfseries Initialize} (FSubsystem\+Collection\+Base \&Collection) override
+\item 
+void \mbox{\hyperlink{class_u_radio_subsystem_a33429f88db0af600cb99fb08bdc7f63f}{Load\+Playlist}} (TArray$<$ USound\+Base \texorpdfstring{$\ast$}{*} $>$ New\+Tracks)
+\begin{DoxyCompactList}\small\item\em Carga una nueva lista de reproducción en el subsistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_radio_subsystem_a26408cb6c1ba728b77983920e099e58d}{Play\+Next\+Track}} ()
+\begin{DoxyCompactList}\small\item\em Reproduce la siguiente pista en la lista de reproducción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_radio_subsystem_afc741e0f476d029417b6d8d1f94464df}{Stop\+Radio}} ()
+\begin{DoxyCompactList}\small\item\em Detiene la reproducción de audio actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}{Set\+Radio\+Volume}} (float Volume)
+\begin{DoxyCompactList}\small\item\em Ajusta el volumen del componente de radio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subsistema encargado de la gestión y reproducción de audio persistente. 
+
+Este subsistema hereda de UGame\+Instance\+Subsystem, lo que garantiza que la música no se interrumpa durante las transiciones de carga entre diferentes niveles (Seamless Travel o Load\+Level).
+
+Provee una interfaz para que los Blueprints puedan controlar listas de reproducción, ajustar el volumen y responder a eventos de cambio de pista. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_radio_subsystem_a33429f88db0af600cb99fb08bdc7f63f}\index{URadioSubsystem@{URadioSubsystem}!LoadPlaylist@{LoadPlaylist}}
+\index{LoadPlaylist@{LoadPlaylist}!URadioSubsystem@{URadioSubsystem}}
+\doxysubsubsection{\texorpdfstring{LoadPlaylist()}{LoadPlaylist()}}
+{\footnotesize\ttfamily \label{class_u_radio_subsystem_a33429f88db0af600cb99fb08bdc7f63f} 
+void URadio\+Subsystem\+::\+Load\+Playlist (\begin{DoxyParamCaption}\item[{TArray$<$ USound\+Base \texorpdfstring{$\ast$}{*} $>$}]{New\+Tracks}{}\end{DoxyParamCaption})}
+
+
+
+Carga una nueva lista de reproducción en el subsistema. 
+
+Reemplaza la lista actual por una nueva colección de pistas. Nota\+: Esto no detiene la reproducción actual de forma automática.
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Tracks} & Arreglo de punteros a USound\+Base (soporta Sound\+Waves y Sound\+Cues). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_radio_subsystem_a26408cb6c1ba728b77983920e099e58d}\index{URadioSubsystem@{URadioSubsystem}!PlayNextTrack@{PlayNextTrack}}
+\index{PlayNextTrack@{PlayNextTrack}!URadioSubsystem@{URadioSubsystem}}
+\doxysubsubsection{\texorpdfstring{PlayNextTrack()}{PlayNextTrack()}}
+{\footnotesize\ttfamily \label{class_u_radio_subsystem_a26408cb6c1ba728b77983920e099e58d} 
+void URadio\+Subsystem\+::\+Play\+Next\+Track (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reproduce la siguiente pista en la lista de reproducción. 
+
+Incrementa el índice actual de forma circular (vuelve al inicio si llega al final). Si el Audio\+Component no está inicializado o registrado en el mundo actual, esta función se encarga de asegurar su validez antes de la reproducción. \Hypertarget{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}\index{URadioSubsystem@{URadioSubsystem}!SetRadioVolume@{SetRadioVolume}}
+\index{SetRadioVolume@{SetRadioVolume}!URadioSubsystem@{URadioSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetRadioVolume()}{SetRadioVolume()}}
+{\footnotesize\ttfamily \label{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b} 
+void URadio\+Subsystem\+::\+Set\+Radio\+Volume (\begin{DoxyParamCaption}\item[{float}]{Volume}{}\end{DoxyParamCaption})}
+
+
+
+Ajusta el volumen del componente de radio. 
+
+Se recomienda que el valor de entrada sea procesado mediante una curva logarítmica antes de llamar a esta función para una percepción natural.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Volume} & Multiplicador de volumen (rango sugerido 0.\+0 a 1.\+0). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_radio_subsystem_afc741e0f476d029417b6d8d1f94464df}\index{URadioSubsystem@{URadioSubsystem}!StopRadio@{StopRadio}}
+\index{StopRadio@{StopRadio}!URadioSubsystem@{URadioSubsystem}}
+\doxysubsubsection{\texorpdfstring{StopRadio()}{StopRadio()}}
+{\footnotesize\ttfamily \label{class_u_radio_subsystem_afc741e0f476d029417b6d8d1f94464df} 
+void URadio\+Subsystem\+::\+Stop\+Radio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Detiene la reproducción de audio actual. 
+
+Libera el recurso de audio del componente, pero mantiene el índice de la pista actual para un posible reinicio. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/exepa/\+Documents/\+Unreal Projects/\+Sub\+Systems/\+Source/\+Sub\+Systems/\+Public/\+Sub\+System/Radio\+Subsystem.\+h\item 
+C\+:/\+Users/exepa/\+Documents/\+Unreal Projects/\+Sub\+Systems/\+Source/\+Sub\+Systems/\+Private/\+Sub\+System/Radio\+Subsystem.\+cpp\end{DoxyCompactItemize}
