@@ -8,7 +8,5 @@ var searchData=
   ['setresolution_5',['SetResolution',['../class_u_graphics_subsystem.html#ae86cd31ef7ebf0ca6437f4ce68abfd87',1,'UGraphicsSubsystem']]],
   ['setscalabilitygroup_6',['SetScalabilityGroup',['../class_u_graphics_subsystem.html#aefa5b5655ad8b568f09498a532756dc7',1,'UGraphicsSubsystem']]],
   ['setsfxsoundclass_7',['SetSFXSoundClass',['../class_u_sound_subsystem.html#a9513a55a5a355fd8d1dbf15a5876be0d',1,'USoundSubsystem']]],
-  ['setsfxvolume_8',['SetSFXVolume',['../class_u_sound_subsystem.html#a158afb18e339accbb79af02fd26b4aa2',1,'USoundSubsystem']]],
-  ['sfxclass_9',['SFXClass',['../class_u_sound_subsystem.html#a0f2db3e8ec9260a7baacc8243c31c30b',1,'USoundSubsystem']]],
-  ['subsystems_10',['SubSystems',['../class_sub_systems.html',1,'']]]
+  ['setsfxvolume_8',['SetSFXVolume',['../class_u_sound_subsystem.html#a158afb18e339accbb79af02fd26b4aa2',1,'USoundSubsystem']]]
 ];

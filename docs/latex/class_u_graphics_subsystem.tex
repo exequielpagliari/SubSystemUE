@@ -1,0 +1,167 @@
+\doxysection{UGraphics\+Subsystem Class Reference}
+\hypertarget{class_u_graphics_subsystem}{}\label{class_u_graphics_subsystem}\index{UGraphicsSubsystem@{UGraphicsSubsystem}}
+
+
+Subsistema encargado de la gestión de configuraciones gráficas y rendimiento.  
+
+
+
+
+{\ttfamily \#include $<$Graphics\+Subsystem.\+h$>$}
+
+Inheritance diagram for UGraphics\+Subsystem\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_graphics_subsystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_graphics_subsystem_ae86cd31ef7ebf0ca6437f4ce68abfd87}{Set\+Resolution}} (int32 Width, int32 Height, bool b\+Fullscreen)
+\begin{DoxyCompactList}\small\item\em Define la resolución de pantalla y el modo de ventana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_graphics_subsystem_ab4b39b38d9a50b913c36c8f035f24946}{Get\+Resolution}} (int32 \&Out\+Width, int32 \&Out\+Height, bool \&Out\+Fullscreen) const
+\begin{DoxyCompactList}\small\item\em Obtiene la resolución actual configurada en el sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_graphics_subsystem_aefa5b5655ad8b568f09498a532756dc7}{Set\+Scalability\+Group}} (int32 Quality\+Level)
+\begin{DoxyCompactList}\small\item\em Establece un nivel de calidad global para todos los grupos de escalabilidad. \end{DoxyCompactList}\item 
+int32 \mbox{\hyperlink{class_u_graphics_subsystem_ac28c4dd263af40d0ccfbd3e277a0da70}{Get\+Scalability\+Group}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el nivel de calidad global actual. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_graphics_subsystem_a0aa24c69a54ab8111f176612736c238b}\label{class_u_graphics_subsystem_a0aa24c69a54ab8111f176612736c238b} 
+void {\bfseries Apply\+And\+Save\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Confirma los cambios gráficos actuales, los aplica al motor y los guarda en el archivo de configuración (.ini). \end{DoxyCompactList}\item 
+\Hypertarget{class_u_graphics_subsystem_ab2ea9047d7c1a40b8d08c6e0a86578f7}\label{class_u_graphics_subsystem_ab2ea9047d7c1a40b8d08c6e0a86578f7} 
+void {\bfseries Run\+Auto\+Benchmark} ()
+\begin{DoxyCompactList}\small\item\em Analiza el hardware del usuario y ajusta automáticamente los niveles de calidad para optimizar el rendimiento. \end{DoxyCompactList}\item 
+TArray$<$ FInt\+Point $>$ \mbox{\hyperlink{class_u_graphics_subsystem_ac88e820234883ba718840f7f0e2cf370}{Get\+Available\+Screen\+Resolutions}} ()
+\begin{DoxyCompactList}\small\item\em Consulta al sistema operativo las resoluciones compatibles con el monitor principal. \end{DoxyCompactList}\item 
+FString \mbox{\hyperlink{class_u_graphics_subsystem_ac6711db4a2bca4ff15add23ecdaa9e7f}{Resolution\+To\+String}} (FInt\+Point Resolution)
+\begin{DoxyCompactList}\small\item\em Convierte un punto de resolución en una cadena de texto legible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+UGame\+User\+Settings \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_graphics_subsystem_a10ea331512c3acf9a17df0bd9358bec9}{Get\+Settings}} () const
+\begin{DoxyCompactList}\small\item\em Función auxiliar para obtener el puntero a UGame\+User\+Settings de forma segura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subsistema encargado de la gestión de configuraciones gráficas y rendimiento. 
+
+Este subsistema actúa como una interfaz simplificada sobre UGame\+User\+Settings, permitiendo ajustar la resolución, niveles de escalabilidad y realizar benchmarks de hardware. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_graphics_subsystem_ac88e820234883ba718840f7f0e2cf370}\index{UGraphicsSubsystem@{UGraphicsSubsystem}!GetAvailableScreenResolutions@{GetAvailableScreenResolutions}}
+\index{GetAvailableScreenResolutions@{GetAvailableScreenResolutions}!UGraphicsSubsystem@{UGraphicsSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetAvailableScreenResolutions()}{GetAvailableScreenResolutions()}}
+{\footnotesize\ttfamily \label{class_u_graphics_subsystem_ac88e820234883ba718840f7f0e2cf370} 
+TArray$<$ FInt\+Point $>$ UGraphics\+Subsystem\+::\+Get\+Available\+Screen\+Resolutions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Consulta al sistema operativo las resoluciones compatibles con el monitor principal. 
+
+\begin{DoxyReturn}{Returns}
+TArray de FInt\+Point conteniendo los pares Ancho x Alto disponibles. 
+\end{DoxyReturn}
+\Hypertarget{class_u_graphics_subsystem_ab4b39b38d9a50b913c36c8f035f24946}\index{UGraphicsSubsystem@{UGraphicsSubsystem}!GetResolution@{GetResolution}}
+\index{GetResolution@{GetResolution}!UGraphicsSubsystem@{UGraphicsSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetResolution()}{GetResolution()}}
+{\footnotesize\ttfamily \label{class_u_graphics_subsystem_ab4b39b38d9a50b913c36c8f035f24946} 
+void UGraphics\+Subsystem\+::\+Get\+Resolution (\begin{DoxyParamCaption}\item[{int32 \&}]{Out\+Width}{, }\item[{int32 \&}]{Out\+Height}{, }\item[{bool \&}]{Out\+Fullscreen}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene la resolución actual configurada en el sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Out\+Width} & \mbox{[}Out\mbox{]} Referencia donde se guardará el ancho. \\
+\hline
+{\em Out\+Height} & \mbox{[}Out\mbox{]} Referencia donde se guardará el alto. \\
+\hline
+{\em Out\+Fullscreen} & \mbox{[}Out\mbox{]} Referencia donde se guardará el estado de pantalla completa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_graphics_subsystem_ac28c4dd263af40d0ccfbd3e277a0da70}\index{UGraphicsSubsystem@{UGraphicsSubsystem}!GetScalabilityGroup@{GetScalabilityGroup}}
+\index{GetScalabilityGroup@{GetScalabilityGroup}!UGraphicsSubsystem@{UGraphicsSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetScalabilityGroup()}{GetScalabilityGroup()}}
+{\footnotesize\ttfamily \label{class_u_graphics_subsystem_ac28c4dd263af40d0ccfbd3e277a0da70} 
+int32 UGraphics\+Subsystem\+::\+Get\+Scalability\+Group (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el nivel de calidad global actual. 
+
+\begin{DoxyReturn}{Returns}
+Nivel de escalabilidad configurado. 
+\end{DoxyReturn}
+\Hypertarget{class_u_graphics_subsystem_a10ea331512c3acf9a17df0bd9358bec9}\index{UGraphicsSubsystem@{UGraphicsSubsystem}!GetSettings@{GetSettings}}
+\index{GetSettings@{GetSettings}!UGraphicsSubsystem@{UGraphicsSubsystem}}
+\doxysubsubsection{\texorpdfstring{GetSettings()}{GetSettings()}}
+{\footnotesize\ttfamily \label{class_u_graphics_subsystem_a10ea331512c3acf9a17df0bd9358bec9} 
+UGame\+User\+Settings \texorpdfstring{$\ast$}{*} UGraphics\+Subsystem\+::\+Get\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Función auxiliar para obtener el puntero a UGame\+User\+Settings de forma segura. 
+
+\begin{DoxyReturn}{Returns}
+Puntero a la instancia actual de configuraciones de usuario del juego. 
+\end{DoxyReturn}
+\Hypertarget{class_u_graphics_subsystem_ac6711db4a2bca4ff15add23ecdaa9e7f}\index{UGraphicsSubsystem@{UGraphicsSubsystem}!ResolutionToString@{ResolutionToString}}
+\index{ResolutionToString@{ResolutionToString}!UGraphicsSubsystem@{UGraphicsSubsystem}}
+\doxysubsubsection{\texorpdfstring{ResolutionToString()}{ResolutionToString()}}
+{\footnotesize\ttfamily \label{class_u_graphics_subsystem_ac6711db4a2bca4ff15add23ecdaa9e7f} 
+FString UGraphics\+Subsystem\+::\+Resolution\+To\+String (\begin{DoxyParamCaption}\item[{FInt\+Point}]{Resolution}{}\end{DoxyParamCaption})}
+
+
+
+Convierte un punto de resolución en una cadena de texto legible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Resolution} & El punto de resolución (FInt\+Point). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+FString con el formato "{}\+Width x Height"{} (ej\+: "{}1920x1080"{}). 
+\end{DoxyReturn}
+\Hypertarget{class_u_graphics_subsystem_ae86cd31ef7ebf0ca6437f4ce68abfd87}\index{UGraphicsSubsystem@{UGraphicsSubsystem}!SetResolution@{SetResolution}}
+\index{SetResolution@{SetResolution}!UGraphicsSubsystem@{UGraphicsSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetResolution()}{SetResolution()}}
+{\footnotesize\ttfamily \label{class_u_graphics_subsystem_ae86cd31ef7ebf0ca6437f4ce68abfd87} 
+void UGraphics\+Subsystem\+::\+Set\+Resolution (\begin{DoxyParamCaption}\item[{int32}]{Width}{, }\item[{int32}]{Height}{, }\item[{bool}]{b\+Fullscreen}{}\end{DoxyParamCaption})}
+
+
+
+Define la resolución de pantalla y el modo de ventana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Width} & Ancho en píxeles. \\
+\hline
+{\em Height} & Alto en píxeles. \\
+\hline
+{\em b\+Fullscreen} & True para pantalla completa, False para modo ventana. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_graphics_subsystem_aefa5b5655ad8b568f09498a532756dc7}\index{UGraphicsSubsystem@{UGraphicsSubsystem}!SetScalabilityGroup@{SetScalabilityGroup}}
+\index{SetScalabilityGroup@{SetScalabilityGroup}!UGraphicsSubsystem@{UGraphicsSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetScalabilityGroup()}{SetScalabilityGroup()}}
+{\footnotesize\ttfamily \label{class_u_graphics_subsystem_aefa5b5655ad8b568f09498a532756dc7} 
+void UGraphics\+Subsystem\+::\+Set\+Scalability\+Group (\begin{DoxyParamCaption}\item[{int32}]{Quality\+Level}{}\end{DoxyParamCaption})}
+
+
+
+Establece un nivel de calidad global para todos los grupos de escalabilidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Quality\+Level} & Nivel de calidad (Normalmente 0=Bajo, 1=Medio, 2=Alto, 3=Ultra). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/exepa/\+Documents/\+Unreal Projects/\+Sub\+Systems/\+Source/\+Sub\+Systems/\+Public/\+Sub\+System/Graphics\+Subsystem.\+h\item 
+C\+:/\+Users/exepa/\+Documents/\+Unreal Projects/\+Sub\+Systems/\+Source/\+Sub\+Systems/\+Private/\+Sub\+System/Graphics\+Subsystem.\+cpp\end{DoxyCompactItemize}

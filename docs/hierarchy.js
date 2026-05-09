@@ -10,6 +10,7 @@ var hierarchy =
       [ "SubSystems", "class_sub_systems.html", null ]
     ] ],
     [ "UGameInstanceSubsystem", null, [
+      [ "UGraphicsSubsystem", "class_u_graphics_subsystem.html", null ],
       [ "USoundSubsystem", "class_u_sound_subsystem.html", null ]
     ] ]
 ];

@@ -1,0 +1,48 @@
+\doxysection{Graphics\+Subsystem.\+h}
+\hypertarget{_graphics_subsystem_8h_source}{}\label{_graphics_subsystem_8h_source}\index{C:/Users/exepa/Documents/Unreal Projects/SubSystems/Source/SubSystems/Public/SubSystem/GraphicsSubsystem.h@{C:/Users/exepa/Documents/Unreal Projects/SubSystems/Source/SubSystems/Public/SubSystem/GraphicsSubsystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Subsystems/GameInstanceSubsystem.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GraphicsSubsystem.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }UGameUserSettings;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ UCLASS()}
+\DoxyCodeLine{00018\ class\ SUBSYSTEMS\_API\ \mbox{\hyperlink{class_u_graphics_subsystem}{UGraphicsSubsystem}}\ :\ public\ UGameInstanceSubsystem}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Settings"{}})}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_graphics_subsystem_ae86cd31ef7ebf0ca6437f4ce68abfd87}{SetResolution}}(int32\ Width,\ int32\ Height,\ \textcolor{keywordtype}{bool}\ bFullscreen);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00038\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Settings"{}})}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_graphics_subsystem_ab4b39b38d9a50b913c36c8f035f24946}{GetResolution}}(int32\&\ OutWidth,\ int32\&\ OutHeight,\ \textcolor{keywordtype}{bool}\&\ OutFullscreen)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Scalability"{}})}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_graphics_subsystem_aefa5b5655ad8b568f09498a532756dc7}{SetScalabilityGroup}}(int32\ QualityLevel);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Scalability"{}})}
+\DoxyCodeLine{00053\ \ \ \ \ int32\ \mbox{\hyperlink{class_u_graphics_subsystem_ac28c4dd263af40d0ccfbd3e277a0da70}{GetScalabilityGroup}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Settings"{}})}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_graphics_subsystem_a0aa24c69a54ab8111f176612736c238b}{ApplyAndSaveSettings}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Hardware"{}})}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_graphics_subsystem_ab2ea9047d7c1a40b8d08c6e0a86578f7}{RunAutoBenchmark}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Hardware"{}})}
+\DoxyCodeLine{00072\ \ \ \ \ TArray<FIntPoint>\ \mbox{\hyperlink{class_u_graphics_subsystem_ac88e820234883ba718840f7f0e2cf370}{GetAvailableScreenResolutions}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Graphics|Utility"{}})}
+\DoxyCodeLine{00080\ \ \ \ \ FString\ \mbox{\hyperlink{class_u_graphics_subsystem_ac6711db4a2bca4ff15add23ecdaa9e7f}{ResolutionToString}}(FIntPoint\ Resolution);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00087\ \ \ \ \ UGameUserSettings*\ \mbox{\hyperlink{class_u_graphics_subsystem_a10ea331512c3acf9a17df0bd9358bec9}{GetSettings}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \};}
+
+\end{DoxyCode}
