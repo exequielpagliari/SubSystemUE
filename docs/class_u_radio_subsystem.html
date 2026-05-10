@@ -131,6 +131,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b
 <tr class="memitem:a26408cb6c1ba728b77983920e099e58d" id="r_a26408cb6c1ba728b77983920e099e58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26408cb6c1ba728b77983920e099e58d">PlayNextTrack</a> ()</td></tr>
 <tr class="memdesc:a26408cb6c1ba728b77983920e099e58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reproduce la siguiente pista en la lista de reproducción.  <br /></td></tr>
 <tr class="separator:a26408cb6c1ba728b77983920e099e58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343227431f6c8feae2bf0c29d3fa3459" id="r_a343227431f6c8feae2bf0c29d3fa3459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a343227431f6c8feae2bf0c29d3fa3459">PlayPreviousTrack</a> ()</td></tr>
+<tr class="memdesc:a343227431f6c8feae2bf0c29d3fa3459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reproduce la pista anterior en la lista de reproducción.  <br /></td></tr>
+<tr class="separator:a343227431f6c8feae2bf0c29d3fa3459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc741e0f476d029417b6d8d1f94464df" id="r_afc741e0f476d029417b6d8d1f94464df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc741e0f476d029417b6d8d1f94464df">StopRadio</a> ()</td></tr>
 <tr class="memdesc:afc741e0f476d029417b6d8d1f94464df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detiene la reproducción de audio actual.  <br /></td></tr>
 <tr class="separator:afc741e0f476d029417b6d8d1f94464df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +189,26 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b
 
 <p>Reproduce la siguiente pista en la lista de reproducción. </p>
 <p>Incrementa el índice actual de forma circular (vuelve al inicio si llega al final). Si el AudioComponent no está inicializado o registrado en el mundo actual, esta función se encarga de asegurar su validez antes de la reproducción. </p>
+
+</div>
+</div>
+<a id="a343227431f6c8feae2bf0c29d3fa3459" name="a343227431f6c8feae2bf0c29d3fa3459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343227431f6c8feae2bf0c29d3fa3459">&#9670;&#160;</a></span>PlayPreviousTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void URadioSubsystem::PlayPreviousTrack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reproduce la pista anterior en la lista de reproducción. </p>
+<p>Decrementa el índice actual de forma circular (vuelve al final si llega al inicio). Si el AudioComponent no está inicializado o registrado en el mundo actual, esta función se encarga de asegurar su validez antes de la reproducción. </p>
 
 </div>
 </div>

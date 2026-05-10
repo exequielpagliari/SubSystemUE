@@ -43,33 +43,39 @@
 \DoxyCodeLine{00057\ \ \ \ \ void\ SetMasterVolume(\textcolor{keywordtype}{float}\ NewVolume);}
 \DoxyCodeLine{00058\ }
 \DoxyCodeLine{00063\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicVolume(\textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMasterVolumeLogarithmic(\textcolor{keywordtype}{float}\ LinearVolume);}
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00070\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicVolumeLogarithmic(\textcolor{keywordtype}{float}\ LinearVolume);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicVolume(\textcolor{keywordtype}{float}\ NewVolume);}
 \DoxyCodeLine{00072\ }
 \DoxyCodeLine{00077\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSFXVolume(\textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicVolumeLogarithmic(\textcolor{keywordtype}{float}\ LinearVolume);}
 \DoxyCodeLine{00079\ }
-\DoxyCodeLine{00081\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMainSoundMix(USoundMix*\ NewSoundMix);}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00085\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMasterSoundClass(USoundClass*\ NewSoundClass);}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00089\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicSoundClass(USoundClass*\ NewSoundClass);}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00093\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSFXSoundClass(USoundClass*\ NewSoundClass);}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00102\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
-\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateMixer(USoundMix*\ InSoundMix,\ USoundClass*\ InSoundClass,\ \textcolor{keywordtype}{float}\ NewVolume);}
-\DoxyCodeLine{00104\ }
-\DoxyCodeLine{00105\ private:}
-\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{float}\ MasterVolume\ =\ 1.f;}
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{float}\ MusicVolume\ =\ 1.f;}
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{float}\ SFXVolume\ =\ 1.f;}
-\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00084\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSFXVolume(\textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSFXVolumeLogarithmic(\textcolor{keywordtype}{float}\ LinearVolume);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00095\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMainSoundMix(USoundMix*\ NewSoundMix);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMasterSoundClass(USoundClass*\ NewSoundClass);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00103\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ SetMusicSoundClass(USoundClass*\ NewSoundClass);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00107\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSFXSoundClass(USoundClass*\ NewSoundClass);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00116\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Sound\ |\ Set"{}})}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateMixer(USoundMix*\ InSoundMix,\ USoundClass*\ InSoundClass,\ \textcolor{keywordtype}{float}\ NewVolume);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ private:}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{float}\ MasterVolume\ =\ 1.f;}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{float}\ MusicVolume\ =\ 1.f;}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{float}\ SFXVolume\ =\ 1.f;}
+\DoxyCodeLine{00126\ \};}
 
 \end{DoxyCode}

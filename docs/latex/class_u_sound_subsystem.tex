@@ -26,12 +26,16 @@ float \mbox{\hyperlink{class_u_sound_subsystem_a3a56aa2e2b3182c22656a0fb2e7b3685
 \begin{DoxyCompactList}\small\item\em Obtiene el volumen actual del canal de Efectos (SFX). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_a9f527586bf86229d3aa4405cf641ba86}{Set\+Master\+Volume}} (float New\+Volume)
 \begin{DoxyCompactList}\small\item\em Actualiza el volumen Master y aplica el override al mezclador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a2978af72b4ae92c5b4166fd53ae5f61d}{Set\+Master\+Volume\+Logarithmic}} (float Linear\+Volume)
+\begin{DoxyCompactList}\small\item\em Actualiza el volumen de Master de manera logarítmica y aplica el override al mezclador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_ac9761b0d370d117eea444357238b5fc7}{Set\+Music\+Volume}} (float New\+Volume)
 \begin{DoxyCompactList}\small\item\em Actualiza el volumen de Música y aplica el override al mezclador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_a99a03f91159d30342c43a908ff139e53}{Set\+Music\+Volume\+Logarithmic}} (float Linear\+Volume)
 \begin{DoxyCompactList}\small\item\em Actualiza el volumen de Música de manera logarítmica y aplica el override al mezclador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_a158afb18e339accbb79af02fd26b4aa2}{Set\+SFXVolume}} (float New\+Volume)
 \begin{DoxyCompactList}\small\item\em Actualiza el volumen de SFX y aplica el override al mezclador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_sound_subsystem_a5cb1430388774a2abe1c8d375113a57f}{Set\+SFXVolume\+Logarithmic}} (float Linear\+Volume)
+\begin{DoxyCompactList}\small\item\em Actualiza el volumen de SFX de manera logarítmica y aplica el override al mezclador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_a2ce2213988694b83f16a0096b00ab8ad}{Set\+Main\+Sound\+Mix}} (USound\+Mix \texorpdfstring{$\ast$}{*}New\+Sound\+Mix)
 \begin{DoxyCompactList}\small\item\em Asigna un nuevo Sound Mix como mezclador principal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_sound_subsystem_a8b9d9f795b4f263781cb1e4fd46ffc82}{Set\+Master\+Sound\+Class}} (USound\+Class \texorpdfstring{$\ast$}{*}New\+Sound\+Class)
@@ -149,6 +153,21 @@ Actualiza el volumen Master y aplica el override al mezclador.
 {\em New\+Volume} & Nuevo volumen en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a2978af72b4ae92c5b4166fd53ae5f61d}\index{USoundSubsystem@{USoundSubsystem}!SetMasterVolumeLogarithmic@{SetMasterVolumeLogarithmic}}
+\index{SetMasterVolumeLogarithmic@{SetMasterVolumeLogarithmic}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetMasterVolumeLogarithmic()}{SetMasterVolumeLogarithmic()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a2978af72b4ae92c5b4166fd53ae5f61d} 
+void USound\+Subsystem\+::\+Set\+Master\+Volume\+Logarithmic (\begin{DoxyParamCaption}\item[{float}]{Linear\+Volume}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el volumen de Master de manera logarítmica y aplica el override al mezclador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Linear\+Volume} & Nuevo volumen lineal en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_u_sound_subsystem_a8cca4219365c83ac9d41d9c6dc2f271a}\index{USoundSubsystem@{USoundSubsystem}!SetMusicSoundClass@{SetMusicSoundClass}}
 \index{SetMusicSoundClass@{SetMusicSoundClass}!USoundSubsystem@{USoundSubsystem}}
 \doxysubsubsection{\texorpdfstring{SetMusicSoundClass()}{SetMusicSoundClass()}}
@@ -222,6 +241,21 @@ Actualiza el volumen de SFX y aplica el override al mezclador.
 
 \begin{DoxyParams}{Parameters}
 {\em New\+Volume} & Nuevo volumen en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_sound_subsystem_a5cb1430388774a2abe1c8d375113a57f}\index{USoundSubsystem@{USoundSubsystem}!SetSFXVolumeLogarithmic@{SetSFXVolumeLogarithmic}}
+\index{SetSFXVolumeLogarithmic@{SetSFXVolumeLogarithmic}!USoundSubsystem@{USoundSubsystem}}
+\doxysubsubsection{\texorpdfstring{SetSFXVolumeLogarithmic()}{SetSFXVolumeLogarithmic()}}
+{\footnotesize\ttfamily \label{class_u_sound_subsystem_a5cb1430388774a2abe1c8d375113a57f} 
+void USound\+Subsystem\+::\+Set\+SFXVolume\+Logarithmic (\begin{DoxyParamCaption}\item[{float}]{Linear\+Volume}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el volumen de SFX de manera logarítmica y aplica el override al mezclador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Linear\+Volume} & Nuevo volumen lineal en rango \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{class_u_sound_subsystem_a79c0480a11fdc25669178c9685640956}\index{USoundSubsystem@{USoundSubsystem}!UpdateMixer@{UpdateMixer}}

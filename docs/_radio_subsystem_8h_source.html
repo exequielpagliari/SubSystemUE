@@ -132,29 +132,33 @@ $(function(){initNavTree('_radio_subsystem_8h_source.html',''); initResizable(tr
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Radio&quot;</span>)</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_radio_subsystem.html#a26408cb6c1ba728b77983920e099e58d">PlayNextTrack</a>();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Radio&quot;</span>)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_radio_subsystem.html#afc741e0f476d029417b6d8d1f94464df">StopRadio</a>();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Radio&quot;</span>)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_radio_subsystem.html#ab1acd8be0bf4711499e978478311485b">SetRadioVolume</a>(<span class="keywordtype">float</span> Volume);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    UPROPERTY()</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    UAudioComponent* RadioAudioComponent;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    TArray&lt;USoundBase*&gt; Playlist;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    int32 CurrentTrackIndex = -1;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    UFUNCTION()</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> OnTrackFinished();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Radio&quot;</span>)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_radio_subsystem.html#a343227431f6c8feae2bf0c29d3fa3459">PlayPreviousTrack</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Radio&quot;</span>)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_radio_subsystem.html#afc741e0f476d029417b6d8d1f94464df">StopRadio</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Radio&quot;</span>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_radio_subsystem.html#ab1acd8be0bf4711499e978478311485b">SetRadioVolume</a>(<span class="keywordtype">float</span> Volume);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    UPROPERTY()</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    UAudioComponent* RadioAudioComponent;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    TArray&lt;USoundBase*&gt; Playlist;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    int32 CurrentTrackIndex = -1;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    UFUNCTION()</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">void</span> OnTrackFinished();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>};</div>
 </div>
 <div class="ttc" id="aclass_u_radio_subsystem_html"><div class="ttname"><a href="class_u_radio_subsystem.html">URadioSubsystem</a></div><div class="ttdoc">Subsistema encargado de la gestión y reproducción de audio persistente.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.h:25</div></div>
 <div class="ttc" id="aclass_u_radio_subsystem_html_a26408cb6c1ba728b77983920e099e58d"><div class="ttname"><a href="class_u_radio_subsystem.html#a26408cb6c1ba728b77983920e099e58d">URadioSubsystem::PlayNextTrack</a></div><div class="ttdeci">void PlayNextTrack()</div><div class="ttdoc">Reproduce la siguiente pista en la lista de reproducción.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.cpp:27</div></div>
 <div class="ttc" id="aclass_u_radio_subsystem_html_a33429f88db0af600cb99fb08bdc7f63f"><div class="ttname"><a href="class_u_radio_subsystem.html#a33429f88db0af600cb99fb08bdc7f63f">URadioSubsystem::LoadPlaylist</a></div><div class="ttdeci">void LoadPlaylist(TArray&lt; USoundBase * &gt; NewTracks)</div><div class="ttdoc">Carga una nueva lista de reproducción en el subsistema.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.cpp:21</div></div>
-<div class="ttc" id="aclass_u_radio_subsystem_html_ab1acd8be0bf4711499e978478311485b"><div class="ttname"><a href="class_u_radio_subsystem.html#ab1acd8be0bf4711499e978478311485b">URadioSubsystem::SetRadioVolume</a></div><div class="ttdeci">void SetRadioVolume(float Volume)</div><div class="ttdoc">Ajusta el volumen del componente de radio.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.cpp:70</div></div>
-<div class="ttc" id="aclass_u_radio_subsystem_html_afc741e0f476d029417b6d8d1f94464df"><div class="ttname"><a href="class_u_radio_subsystem.html#afc741e0f476d029417b6d8d1f94464df">URadioSubsystem::StopRadio</a></div><div class="ttdeci">void StopRadio()</div><div class="ttdoc">Detiene la reproducción de audio actual.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.cpp:62</div></div>
+<div class="ttc" id="aclass_u_radio_subsystem_html_a343227431f6c8feae2bf0c29d3fa3459"><div class="ttname"><a href="class_u_radio_subsystem.html#a343227431f6c8feae2bf0c29d3fa3459">URadioSubsystem::PlayPreviousTrack</a></div><div class="ttdeci">void PlayPreviousTrack()</div><div class="ttdoc">Reproduce la pista anterior en la lista de reproducción.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.cpp:64</div></div>
+<div class="ttc" id="aclass_u_radio_subsystem_html_ab1acd8be0bf4711499e978478311485b"><div class="ttname"><a href="class_u_radio_subsystem.html#ab1acd8be0bf4711499e978478311485b">URadioSubsystem::SetRadioVolume</a></div><div class="ttdeci">void SetRadioVolume(float Volume)</div><div class="ttdoc">Ajusta el volumen del componente de radio.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.cpp:103</div></div>
+<div class="ttc" id="aclass_u_radio_subsystem_html_afc741e0f476d029417b6d8d1f94464df"><div class="ttname"><a href="class_u_radio_subsystem.html#afc741e0f476d029417b6d8d1f94464df">URadioSubsystem::StopRadio</a></div><div class="ttdeci">void StopRadio()</div><div class="ttdoc">Detiene la reproducción de audio actual.</div><div class="ttdef"><b>Definition</b> RadioSubsystem.cpp:95</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

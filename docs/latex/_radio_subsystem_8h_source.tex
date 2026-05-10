@@ -28,22 +28,25 @@
 \DoxyCodeLine{00050\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
 \DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_a26408cb6c1ba728b77983920e099e58d}{PlayNextTrack}}();}
 \DoxyCodeLine{00052\ }
-\DoxyCodeLine{00059\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_afc741e0f476d029417b6d8d1f94464df}{StopRadio}}();}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00070\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}{SetRadioVolume}}(\textcolor{keywordtype}{float}\ Volume);}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ \ \ \ \ }
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00081\ \ \ \ \ UPROPERTY()}
-\DoxyCodeLine{00082\ \ \ \ \ UAudioComponent*\ RadioAudioComponent;}
-\DoxyCodeLine{00086\ \ \ \ \ TArray<USoundBase*>\ Playlist;}
-\DoxyCodeLine{00091\ \ \ \ \ int32\ CurrentTrackIndex\ =\ -\/1;}
-\DoxyCodeLine{00098\ \ \ \ \ UFUNCTION()}
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ OnTrackFinished();}
-\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00060\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_a343227431f6c8feae2bf0c29d3fa3459}{PlayPreviousTrack}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_afc741e0f476d029417b6d8d1f94464df}{StopRadio}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00080\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Radio"{}})}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}{SetRadioVolume}}(\textcolor{keywordtype}{float}\ Volume);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00092\ \ \ \ \ UAudioComponent*\ RadioAudioComponent;}
+\DoxyCodeLine{00096\ \ \ \ \ TArray<USoundBase*>\ Playlist;}
+\DoxyCodeLine{00101\ \ \ \ \ int32\ CurrentTrackIndex\ =\ -\/1;}
+\DoxyCodeLine{00108\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ OnTrackFinished();}
+\DoxyCodeLine{00110\ \};}
 
 \end{DoxyCode}

@@ -25,6 +25,8 @@ void \mbox{\hyperlink{class_u_radio_subsystem_a33429f88db0af600cb99fb08bdc7f63f}
 \begin{DoxyCompactList}\small\item\em Carga una nueva lista de reproducción en el subsistema. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_radio_subsystem_a26408cb6c1ba728b77983920e099e58d}{Play\+Next\+Track}} ()
 \begin{DoxyCompactList}\small\item\em Reproduce la siguiente pista en la lista de reproducción. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_radio_subsystem_a343227431f6c8feae2bf0c29d3fa3459}{Play\+Previous\+Track}} ()
+\begin{DoxyCompactList}\small\item\em Reproduce la pista anterior en la lista de reproducción. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_radio_subsystem_afc741e0f476d029417b6d8d1f94464df}{Stop\+Radio}} ()
 \begin{DoxyCompactList}\small\item\em Detiene la reproducción de audio actual. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}{Set\+Radio\+Volume}} (float Volume)
@@ -66,7 +68,17 @@ void URadio\+Subsystem\+::\+Play\+Next\+Track (\begin{DoxyParamCaption}{}{}\end{
 
 Reproduce la siguiente pista en la lista de reproducción. 
 
-Incrementa el índice actual de forma circular (vuelve al inicio si llega al final). Si el Audio\+Component no está inicializado o registrado en el mundo actual, esta función se encarga de asegurar su validez antes de la reproducción. \Hypertarget{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}\index{URadioSubsystem@{URadioSubsystem}!SetRadioVolume@{SetRadioVolume}}
+Incrementa el índice actual de forma circular (vuelve al inicio si llega al final). Si el Audio\+Component no está inicializado o registrado en el mundo actual, esta función se encarga de asegurar su validez antes de la reproducción. \Hypertarget{class_u_radio_subsystem_a343227431f6c8feae2bf0c29d3fa3459}\index{URadioSubsystem@{URadioSubsystem}!PlayPreviousTrack@{PlayPreviousTrack}}
+\index{PlayPreviousTrack@{PlayPreviousTrack}!URadioSubsystem@{URadioSubsystem}}
+\doxysubsubsection{\texorpdfstring{PlayPreviousTrack()}{PlayPreviousTrack()}}
+{\footnotesize\ttfamily \label{class_u_radio_subsystem_a343227431f6c8feae2bf0c29d3fa3459} 
+void URadio\+Subsystem\+::\+Play\+Previous\+Track (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reproduce la pista anterior en la lista de reproducción. 
+
+Decrementa el índice actual de forma circular (vuelve al final si llega al inicio). Si el Audio\+Component no está inicializado o registrado en el mundo actual, esta función se encarga de asegurar su validez antes de la reproducción. \Hypertarget{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b}\index{URadioSubsystem@{URadioSubsystem}!SetRadioVolume@{SetRadioVolume}}
 \index{SetRadioVolume@{SetRadioVolume}!URadioSubsystem@{URadioSubsystem}}
 \doxysubsubsection{\texorpdfstring{SetRadioVolume()}{SetRadioVolume()}}
 {\footnotesize\ttfamily \label{class_u_radio_subsystem_ab1acd8be0bf4711499e978478311485b} 

@@ -147,34 +147,40 @@ $(function(){initNavTree('_sound_subsystem_8h_source.html',''); initResizable(tr
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    void SetMasterVolume(<span class="keywordtype">float</span> NewVolume);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> SetMusicVolume(<span class="keywordtype">float</span> NewVolume);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> SetMasterVolumeLogarithmic(<span class="keywordtype">float</span> LinearVolume);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> SetMusicVolumeLogarithmic(<span class="keywordtype">float</span> LinearVolume);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> SetMusicVolume(<span class="keywordtype">float</span> NewVolume);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> SetSFXVolume(<span class="keywordtype">float</span> NewVolume);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> SetMusicVolumeLogarithmic(<span class="keywordtype">float</span> LinearVolume);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> SetMainSoundMix(USoundMix* NewSoundMix);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> SetMasterSoundClass(USoundClass* NewSoundClass);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> SetMusicSoundClass(USoundClass* NewSoundClass);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> SetSFXSoundClass(USoundClass* NewSoundClass);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordtype">void</span> UpdateMixer(USoundMix* InSoundMix, USoundClass* InSoundClass, <span class="keywordtype">float</span> NewVolume);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>private:</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">float</span> MasterVolume = 1.f;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">float</span> MusicVolume = 1.f;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">float</span> SFXVolume = 1.f;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> SetSFXVolume(<span class="keywordtype">float</span> NewVolume);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> SetSFXVolumeLogarithmic(<span class="keywordtype">float</span> LinearVolume);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> SetMainSoundMix(USoundMix* NewSoundMix);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">void</span> SetMasterSoundClass(USoundClass* NewSoundClass);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> SetMusicSoundClass(USoundClass* NewSoundClass);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> SetSFXSoundClass(USoundClass* NewSoundClass);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Sound | Set&quot;</span>)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> UpdateMixer(USoundMix* InSoundMix, USoundClass* InSoundClass, <span class="keywordtype">float</span> NewVolume);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>private:</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">float</span> MasterVolume = 1.f;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">float</span> MusicVolume = 1.f;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">float</span> SFXVolume = 1.f;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>};</div>
 </div>
 <div class="ttc" id="aclass_u_sound_subsystem_html"><div class="ttname"><a href="class_u_sound_subsystem.html">USoundSubsystem</a></div><div class="ttdoc">Subsistema encargado de la gestión global del volumen y la mezcla de sonido.</div><div class="ttdef"><b>Definition</b> SoundSubsystem.h:20</div></div>
 <div class="ttc" id="aclass_u_sound_subsystem_html_a052a9bb0c6b4cf52822da52bebf26e01"><div class="ttname"><a href="class_u_sound_subsystem.html#a052a9bb0c6b4cf52822da52bebf26e01">USoundSubsystem::MusicClass</a></div><div class="ttdeci">TObjectPtr&lt; USoundClass &gt; MusicClass</div><div class="ttdoc">Referencia a la clase de sonido que agrupa la música.</div><div class="ttdef"><b>Definition</b> SoundSubsystem.h:34</div></div>

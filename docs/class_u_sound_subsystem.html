@@ -135,6 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9f527586bf86229d3aa4405cf641ba86" id="r_a9f527586bf86229d3aa4405cf641ba86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f527586bf86229d3aa4405cf641ba86">SetMasterVolume</a> (float NewVolume)</td></tr>
 <tr class="memdesc:a9f527586bf86229d3aa4405cf641ba86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el volumen Master y aplica el override al mezclador.  <br /></td></tr>
 <tr class="separator:a9f527586bf86229d3aa4405cf641ba86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2978af72b4ae92c5b4166fd53ae5f61d" id="r_a2978af72b4ae92c5b4166fd53ae5f61d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2978af72b4ae92c5b4166fd53ae5f61d">SetMasterVolumeLogarithmic</a> (float LinearVolume)</td></tr>
+<tr class="memdesc:a2978af72b4ae92c5b4166fd53ae5f61d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el volumen de Master de manera logarítmica y aplica el override al mezclador.  <br /></td></tr>
+<tr class="separator:a2978af72b4ae92c5b4166fd53ae5f61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9761b0d370d117eea444357238b5fc7" id="r_ac9761b0d370d117eea444357238b5fc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9761b0d370d117eea444357238b5fc7">SetMusicVolume</a> (float NewVolume)</td></tr>
 <tr class="memdesc:ac9761b0d370d117eea444357238b5fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el volumen de Música y aplica el override al mezclador.  <br /></td></tr>
 <tr class="separator:ac9761b0d370d117eea444357238b5fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +147,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a158afb18e339accbb79af02fd26b4aa2" id="r_a158afb18e339accbb79af02fd26b4aa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a158afb18e339accbb79af02fd26b4aa2">SetSFXVolume</a> (float NewVolume)</td></tr>
 <tr class="memdesc:a158afb18e339accbb79af02fd26b4aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el volumen de SFX y aplica el override al mezclador.  <br /></td></tr>
 <tr class="separator:a158afb18e339accbb79af02fd26b4aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb1430388774a2abe1c8d375113a57f" id="r_a5cb1430388774a2abe1c8d375113a57f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cb1430388774a2abe1c8d375113a57f">SetSFXVolumeLogarithmic</a> (float LinearVolume)</td></tr>
+<tr class="memdesc:a5cb1430388774a2abe1c8d375113a57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el volumen de SFX de manera logarítmica y aplica el override al mezclador.  <br /></td></tr>
+<tr class="separator:a5cb1430388774a2abe1c8d375113a57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ce2213988694b83f16a0096b00ab8ad" id="r_a2ce2213988694b83f16a0096b00ab8ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ce2213988694b83f16a0096b00ab8ad">SetMainSoundMix</a> (USoundMix *NewSoundMix)</td></tr>
 <tr class="memdesc:a2ce2213988694b83f16a0096b00ab8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asigna un nuevo Sound Mix como mezclador principal.  <br /></td></tr>
 <tr class="separator:a2ce2213988694b83f16a0096b00ab8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -342,6 +348,31 @@ TObjectPtr&lt; USoundClass &gt;&#160;</td><td class="memItemRight" valign="botto
 
 </div>
 </div>
+<a id="a2978af72b4ae92c5b4166fd53ae5f61d" name="a2978af72b4ae92c5b4166fd53ae5f61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2978af72b4ae92c5b4166fd53ae5f61d">&#9670;&#160;</a></span>SetMasterVolumeLogarithmic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USoundSubsystem::SetMasterVolumeLogarithmic </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>LinearVolume</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza el volumen de Master de manera logarítmica y aplica el override al mezclador. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LinearVolume</td><td>Nuevo volumen lineal en rango [0.0 - 1.0]. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8cca4219365c83ac9d41d9c6dc2f271a" name="a8cca4219365c83ac9d41d9c6dc2f271a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8cca4219365c83ac9d41d9c6dc2f271a">&#9670;&#160;</a></span>SetMusicSoundClass()</h2>
 
@@ -461,6 +492,31 @@ TObjectPtr&lt; USoundClass &gt;&#160;</td><td class="memItemRight" valign="botto
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">NewVolume</td><td>Nuevo volumen en rango [0.0 - 1.0]. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5cb1430388774a2abe1c8d375113a57f" name="a5cb1430388774a2abe1c8d375113a57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb1430388774a2abe1c8d375113a57f">&#9670;&#160;</a></span>SetSFXVolumeLogarithmic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void USoundSubsystem::SetSFXVolumeLogarithmic </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>LinearVolume</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza el volumen de SFX de manera logarítmica y aplica el override al mezclador. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LinearVolume</td><td>Nuevo volumen lineal en rango [0.0 - 1.0]. </td></tr>
   </table>
   </dd>
 </dl>
